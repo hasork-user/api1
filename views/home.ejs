@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<% keys.forEach(function(key){ %>
+		<h2><%= key %></h2>
+		<form method="POST" action="/object/<%= key %>?_method=DELETE">
+			<button>Delete</button>
+		</form>
+		<a href="/download/object/<%= key %>">Download</a>
+		<a href="/show/<%= key %>">Show</a>
+	<% }); %>
+
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<% if(file[0].type.slice(0,5) == "image"){ %>
+		<img height="500px" width="700px" src="<%= file[0].url %>">
+	<% }else{ %>
+		<video width="320" height="240" controls>
+			<source src="<%= file[0].url %>" type="<%= file[0].type %>">
+		</video>
+	<% } %>
+
+</body>
+</html>
